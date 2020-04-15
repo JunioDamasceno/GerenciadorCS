@@ -22,5 +22,5 @@ parts:
       
  apps:
    offlineimap:
-     command: bin/gerencidorcs
+     command: bin/gerenciadorcs
   
