@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup( name = 'gerenciadorcs',
-       version = '1.0.0',
+       version = '2.1',
        author = 'Junio da Silva Damasceno',
        author_email = 'juniowin@yahoo.com.br',
        packages = ['gerenciadorcs'],
