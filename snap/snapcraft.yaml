@@ -8,7 +8,7 @@
     no computador do usuário. Este programa não se conecta a internet, não armazena
     dados em núvem e não coleta informações privadas.
 
-  grade: dstable
+  grade: stable
   confinement: classic
   base: core18
 
