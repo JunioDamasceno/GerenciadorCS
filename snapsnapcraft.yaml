@@ -9,7 +9,7 @@
     dados em núvem e não coleta informações privadas.
 
   grade: stable
-  confinement: classic
+  confinement: devmode
   base: core18
 
   parts:
@@ -22,6 +22,6 @@
         - libcanberra-gtk3-module
         - gir1.2-gtk-3.0
   apps:
-    offlineimap:
-      command: /bin/gerenciadorcs
+    gerenciadorcs:
+      command: gerenciadorcs
   
