@@ -23,5 +23,5 @@
         - gir1.2-gtk-3.0
   apps:
     offlineimap:
-      command: /bin/gerenciadorcs.desktop
+      command: /bin/gerenciadorcs
   
