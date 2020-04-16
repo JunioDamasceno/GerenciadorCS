@@ -23,5 +23,5 @@
         - gir1.2-gtk-3.0
   apps:
     gerenciadorcs:
-      command: gerenciadorcs
+      command: /gerenciadorcs/gerenciadorcs
   
