@@ -27,5 +27,5 @@
         - gir1.2-gtk-3.0
   apps:
     gerenciadorcs:
-      command: /gerenciadorcs/gerenciadorcs
+      command: pithon 3.6 /gerenciadorcs/gerenciadorcs.py
   
