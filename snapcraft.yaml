@@ -7,9 +7,13 @@
     armazenar contas e senhas de forma segura. Toda informação fica criptografada
     no computador do usuário. Este programa não se conecta a internet, não armazena
     dados em núvem e não coleta informações privadas.
-    
+   
   confinement: devmode
   base: core18
+  
+  architectures:
+  - build-on: amd64
+  - build-on: i386
 
   parts:
     gerenciadorcs:
