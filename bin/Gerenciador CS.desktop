@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Gerenciador CS
+Comment=
+Exec=python3.6 gerenciadorcs.py
+Icon=
+Path=gerenciadorcs
+Terminal=true
+StartupNotify=false
