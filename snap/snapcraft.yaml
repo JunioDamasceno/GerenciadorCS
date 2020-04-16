@@ -20,7 +20,7 @@
       stage-packages:
         - python3-gi
         - libcanberra-gtk3-module
-        - gir1.2-gtk-3.
+        - gir1.2-gtk-3.0
   apps:
     offlineimap:
       command: bin/gerenciadorcs.desktop
