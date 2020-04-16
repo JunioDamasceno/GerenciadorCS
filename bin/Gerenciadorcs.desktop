@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Gerenciador CS
+Name=gerenciadorcs
 Comment=
 Exec=python3.6 gerenciadorcs.py
 Icon=
