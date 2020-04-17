@@ -25,7 +25,7 @@
         - python3-gi
         - libcanberra-gtk3-module
         - gir1.2-gtk-3.0
-        - gir1.2-notify
+        - gir1.2-notify-0.7
   apps:
     gerenciadorcs:
       command: python3.6 ${SNAP}/lib/python3.6/site-packages/gerenciadorcs/gerenciadorcs.py
