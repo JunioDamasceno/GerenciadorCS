@@ -3,7 +3,6 @@ Name=Gerenciadorcs
 Type=Application
 Categories=Development
 Exec=python3.6 ${SNAP}/lib/python3.6/site-packages/gerenciadorcs/gerenciadorcs.py
-Icon=${SNAP}/icone/icone_64x64.svg
 MimeType=text/html;
 Keywords=Development;Security;Keymanager
 Name[pt_BR]=gerenciadorcs.desktop
