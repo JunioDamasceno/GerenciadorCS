@@ -22,7 +22,7 @@ setup( name = 'gerenciadorcs',
             ),
            ('svg', [
                'gerenciadorcs/icone_64x64.svg',
-               'gerenciadorcs/icone_128x218.svg'
+               'gerenciadorcs/icone_128x128.svg'
                ]
             ),
            ('ico', [
