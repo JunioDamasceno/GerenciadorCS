@@ -27,5 +27,6 @@
         - gir1.2-gtk-3.0
   apps:
     gerenciadorcs:
-      command: python3.6 gerenciadorcs/gerenciadorcs.py
+      command: python3.6 ${SNAP}/lib/python3.6/site-packages/gerenciadorcs/gerenciadorcs.py
+      desktop: desktop/gerenciadorcs.desktop
   
