@@ -8,7 +8,7 @@
     no computador do usuário. Este programa não se conecta a internet, não armazena
     dados em núvem e não coleta informações privadas.
    
-  confinement: classic
+  confinement: devmode
   base: core18
   
   architectures:
