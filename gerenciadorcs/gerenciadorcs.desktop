@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Gerenciadorcs
+Type=Application
+Categories=Development
+Exec=python3.6 gerenciadorcs.py
+Icon=icone_64x64.svg
+MimeType=text/html;
+Keywords=Development;Security;Keymanager
+Name[pt_BR]=gerenciadorcs.desktop
