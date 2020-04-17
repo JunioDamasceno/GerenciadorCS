@@ -28,5 +28,5 @@
   apps:
     gerenciadorcs:
       command: python3.6 gerenciadorcs/gerenciadorcs.py
-      desktop: gerenciadorcs/gerenciadorcs.desktop
+      desktop: gerenciadorcs.desktop
   
