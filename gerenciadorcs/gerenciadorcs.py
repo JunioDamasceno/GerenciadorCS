@@ -12,7 +12,7 @@ class main_window:
         #no arquivo 'interface.glade'. Este arquivo foi criado no programa
         #Glade versão 3.22.1, o Glade é um construtor de interfaces de usuário
         #para GTK+ e GNOME.
-        self.gladefile = '${SNAP}/current/glade/interface.glade'
+        self.gladefile = 'snap/gerenciadorcs/current/glade/interface.glade'
         self.builder = Gtk.Builder()
         self.builder.add_from_file(self.gladefile)
         
@@ -101,8 +101,8 @@ class main_window:
                 pux = self.msg_pux.get_text()
                 pux = pux.encode('utf-8')
                 pux = pux.hex()
-                arq_ux = open('ux.bin', 'r')
-                arq_sx = open('sx.bin', 'r')
+                arq_ux = open('snap/gerenciadorcs/bin/ux.bin', 'r')
+                arq_sx = open('snap/gerenciadorcs/bin/sx.bin', 'r')
                 
                 for linha in arq_ux:
                     linha = linha.rstrip()
@@ -192,7 +192,7 @@ class main_window:
                             dialogo(mnuser1)
                             ad = nuser
                         else:
-                            user_check = open('ux.bin', 'r')
+                            user_check = open('snap/gerenciadorcs/bin/ux.bin', 'r')
                             for linha in user_check:
                                 linha = linha.rstrip()
                                 #a variável ad armazena cada linha do arquivo uma por vez
@@ -234,8 +234,8 @@ class main_window:
                     #a caixa de diálogo ele fecha a caixa de diálogo 'new_user' e
                     # volta a janela de 'login'.
                     if (self.chave_check == 0):
-                        arq_ux = open('ux.bin', 'a+')
-                        arq_sx = open('sx.bin', 'a+')
+                        arq_ux = open('snap/gerenciadorcs/bin/ux.bin', 'a+')
+                        arq_sx = open('snap/gerenciadorcs/bin/sx.bin', 'a+')
                         arq_ux.write("{}\n".format(nuser))
                         arq_sx.write("{}\n".format(userp))
                         arq_ux.seek(0)
@@ -301,19 +301,19 @@ class main_window:
         conta_ps = conta_ps.encode('utf-8')
         conta_ps = conta_ps.hex()
 
-        arq_ac = open('ac.bin', 'a+')
+        arq_ac = open('snap/gerenciadorcs/bin/ac.bin', 'a+')
         arq_ac.write("{}\n".format(conta_name))
         arq_ac.seek(0)
         arq_ac.close()
-        arq_nu = open('nu.bin', 'a+')
+        arq_nu = open('snap/gerenciadorcs/bin/nu.bin', 'a+')
         arq_nu.write("{}\n".format(nome_usuario))
         arq_nu.seek(0)
         arq_nu.close()
-        arq_se = open('se.bin', 'a+')
+        arq_se = open('snap/gerenciadorcs/bin/se.bin', 'a+')
         arq_se.write("{}\n".format(conta_ps))
         arq_se.seek(0)
         arq_se.close()
-        arq_asu = open('asu.bin', 'a+')
+        arq_asu = open('snap/gerenciadorcs/bin/asu.bin', 'a+')
         arq_asu.write("{}\n".format(self.aux))
         arq_asu.seek(0)
         arq_asu.close()
@@ -339,7 +339,7 @@ class main_window:
         tabela_asu = []
         
 
-        arq_ac = open('ac.bin', 'r')
+        arq_ac = open('snap/gerenciadorcs/bin/ac.bin', 'r')
         iac = 0
         for linha in arq_ac:
             linha = linha.rstrip()
@@ -351,7 +351,7 @@ class main_window:
         arq_ac.seek(0)
         arq_ac.close()
 
-        arq_nu = open('nu.bin', 'r')
+        arq_nu = open('snap/gerenciadorcs/bin/nu.bin', 'r')
         inu = 0
         for linha in arq_nu:
             linha = linha.rstrip()
@@ -363,7 +363,7 @@ class main_window:
         arq_nu.seek(0)
         arq_nu.close()
 
-        arq_se = open('se.bin', 'r')
+        arq_se = open('snap/gerenciadorcs/bin/se.bin', 'r')
         ise = 0
         for linha in arq_se:
             linha = linha.rstrip()
@@ -375,7 +375,7 @@ class main_window:
         arq_se.seek(0)
         arq_se.close()
 
-        arq_asu = open('asu.bin', 'r')
+        arq_asu = open('snap/gerenciadorcs/bin/asu.bin', 'r')
         iasu = 0
         counter = 0
         for linha in arq_asu:
@@ -480,7 +480,7 @@ class main_window:
             tabela_nu = []
             tabela_se = []
             tabela_asu = []
-            arq_ac = open('ac.bin', 'r')
+            arq_ac = open('snap/gerenciadorcs/bin/ac.bin', 'r')
             iac = 0
             for linha in arq_ac:
                 linha = linha.rstrip()
@@ -492,7 +492,7 @@ class main_window:
             arq_ac.seek(0)
             arq_ac.close()
 
-            arq_nu = open('nu.bin', 'r')
+            arq_nu = open('snap/gerenciadorcs/bin/nu.bin', 'r')
             inu = 0
             for linha in arq_nu:
                 linha = linha.rstrip()
@@ -504,7 +504,7 @@ class main_window:
             arq_nu.seek(0)
             arq_nu.close()
 
-            arq_se = open('se.bin', 'r')
+            arq_se = open('snap/gerenciadorcs/bin/se.bin', 'r')
             ise = 0
             for linha in arq_se:
                 linha = linha.rstrip()
@@ -516,7 +516,7 @@ class main_window:
             arq_se.seek(0)
             arq_se.close()
 
-            arq_asu = open('asu.bin', 'r')
+            arq_asu = open('snap/gerenciadorcs/bin/asu.bin', 'r')
             iasu = 0
             counter = 0
             for linha in arq_asu:
@@ -564,10 +564,10 @@ class main_window:
                 c2 = c2 + 1
 
             if (chave_alterar > 0):
-                arq_c = open('ac.bin', 'w')
+                arq_c = open('snap/gerenciadorcs/bin/ac.bin', 'w')
                 arq_c.write('')
                 arq_c.close()
-                arq_c = open('ac.bin', 'a+')
+                arq_c = open('snap/gerenciadorcs/bin/ac.bin', 'a+')
                 for index, item in enumerate(a):
                     ca = item
                     ca = ca.encode('utf-8')
@@ -575,10 +575,10 @@ class main_window:
                     arq_c.write("{}\n".format(ca))
                 arq_c.close()
                 
-                arq_n = open('nu.bin', 'w')
+                arq_n = open('snap/gerenciadorcs/bin/nu.bin', 'w')
                 arq_n.write('')
                 arq_n.close()
-                arq_n = open('nu.bin', 'a+')
+                arq_n = open('snap/gerenciadorcs/bin/nu.bin', 'a+')
                 for index, item in enumerate(d):
                     na = item
                     na = na.encode('utf-8')
@@ -586,10 +586,10 @@ class main_window:
                     arq_n.write("{}\n".format(na))
                 arq_n.close()
 
-                arq_s = open('se.bin', 'w')
+                arq_s = open('snap/gerenciadorcs/bin/se.bin', 'w')
                 arq_s.write('')
                 arq_s.close()
-                arq_s = open('se.bin', 'a+')
+                arq_s = open('snap/gerenciadorcs/bin/se.bin', 'a+')
                 
                 for index, item in enumerate(b):
                     sa = item
