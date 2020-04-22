@@ -12,7 +12,7 @@ class main_window:
         #no arquivo 'interface.glade'. Este arquivo foi criado no programa
         #Glade versão 3.22.1, o Glade é um construtor de interfaces de usuário
         #para GTK+ e GNOME.
-        self.gladefile = '${SNAP}/gerenciadorcs/current/glade/interface.glade'
+        self.gladefile = '${SNAP}/current/glade/interface.glade'
         self.builder = Gtk.Builder()
         self.builder.add_from_file(self.gladefile)
         
