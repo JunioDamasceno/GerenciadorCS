@@ -14,6 +14,17 @@
   architectures:
   - build-on: amd64
   - build-on: i386
+  
+  plugs:
+    gerenciadorcs:
+    interface: system-files
+      write:
+      - /snap/gerenciadorcs/current/bin/ac.bin
+      - /snap/gerenciadorcs/current/bin/se.bin
+      - /snap/gerenciadorcs/current/bin/sx.bin
+      - /snap/gerenciadorcs/current/bin/ux.bin
+      - /snap/gerenciadorcs/current/bin/asu.bin
+      - /snap/gerenciadorcs/current/bin/nu.bin
 
   parts:
     gerenciadorcs:
