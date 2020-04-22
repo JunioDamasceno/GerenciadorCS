@@ -17,7 +17,7 @@
   
   plugs:
     gerenciadorcs:
-    interface: system-files
+      interface: system-files
       write:
       - /snap/gerenciadorcs/current/bin/ac.bin
       - /snap/gerenciadorcs/current/bin/se.bin
