@@ -18,14 +18,10 @@
   plugs:
     bin-gerenciadorcs:
       interface: system-files
+      read:
+      - /snap/gerenciadorcs/current/bin
       write:
-      - /snap/gerenciadorcs/current/bin/ac.bin
-      - /snap/gerenciadorcs/current/bin/se.bin
-      - /snap/gerenciadorcs/current/bin/sx.bin
-      - /snap/gerenciadorcs/current/bin/ux.bin
-      - /snap/gerenciadorcs/current/bin/asu.bin
-      - /snap/gerenciadorcs/current/bin/nu.bin
-  
+      - /snap/gerenciadorcs/current/bin
  
   parts:
     gerenciadorcs:
