@@ -14,15 +14,7 @@
   architectures:
   - build-on: amd64
   - build-on: i386
-  
-  plugs:
-    bin-gerenciadorcs:
-      interface: system-files
-      read:
-      - /snap/gerenciadorcs/current/bin
-      write:
-      - /snap/gerenciadorcs/current/bin
- 
+
   parts:
     gerenciadorcs:
       plugin: python
@@ -40,6 +32,4 @@
     gerenciadorcs:
       command: python3.6 /snap/gerenciadorcs/current/lib/python3.6/site-packages/gerenciadorcs/gerenciadorcs.py
       extensions: [gnome-3-28]
-      plugs:
-      - bin-gerenciadorcs
   
