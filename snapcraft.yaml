@@ -15,17 +15,7 @@
   - build-on: amd64
   - build-on: i386
   
-  plugs:
-    gerenciadorcs-system-files:
-      interface: system-files
-      write:
-      - /snap/gerenciadorcs/current/bin/ac.bin
-      - /snap/gerenciadorcs/current/bin/se.bin
-      - /snap/gerenciadorcs/current/bin/sx.bin
-      - /snap/gerenciadorcs/current/bin/ux.bin
-      - /snap/gerenciadorcs/current/bin/asu.bin
-      - /snap/gerenciadorcs/current/bin/nu.bin
-
+ 
   parts:
     gerenciadorcs:
       plugin: python
@@ -43,4 +33,13 @@
     gerenciadorcs:
       command: python3.6 /snap/gerenciadorcs/current/lib/python3.6/site-packages/gerenciadorcs/gerenciadorcs.py
       extensions: [gnome-3-28]
+      plugs:
+        interface: system-files
+        write:
+        - /snap/gerenciadorcs/current/bin/ac.bin
+        - /snap/gerenciadorcs/current/bin/se.bin
+        - /snap/gerenciadorcs/current/bin/sx.bin
+        - /snap/gerenciadorcs/current/bin/ux.bin
+        - /snap/gerenciadorcs/current/bin/asu.bin
+        - /snap/gerenciadorcs/current/bin/nu.bin
   
