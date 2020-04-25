@@ -82,8 +82,8 @@
     <property name="copyright" translatable="yes">Copyright Lion Design.</property>
     <property name="comments" translatable="yes">O "Grenciador de Contas e Senhas" é um programa desenvolvido por Junio da Silva Damasceno, proprietário da Lion Desing. Este programa é uma plataforma segura onde usuários podem armazenar suas contas e senhas. Este programa não se conecta a internet, não armazena remotamente seus dados e não faz login em nenhuma conta cadastrada. Toda a informação que o usuário armazena dentro deste programa fica criptografada dentro do computador do usuário. O intuito da criação deste programa foi o de fornecer uma plataforma onde o usuário possa armazenar as diversas contas e senhas que ele eventualmente venha a possuir, e caso ele não se lembre no futuro pode recorrer a este programa para recuperar a informação.</property>
     <property name="authors">Junio da Silva Damasceno</property>
-    <property name="logo">icone_64x64.png</property>
-    <property name="license_type">gpl-3-0</property>
+    <property name="logo">snap/gerenciadorcs/current/png/icone_64x64.png</property>
+    <property name="license_type">mit-x11</property>
     <child>
       <placeholder/>
     </child>
@@ -142,7 +142,7 @@ Conta: 16802387-1</property>
     <property name="title" translatable="yes">Login</property>
     <property name="window_position">center-always</property>
     <property name="default_width">200</property>
-    <property name="icon">icone_64x64.png</property>
+    <property name="icon">snap/gerenciadorcs/current/png/icone_64x64.png</property>
     <property name="type_hint">dialog</property>
     <signal name="destroy" handler="on_login_destroy" swapped="no"/>
     <child>
