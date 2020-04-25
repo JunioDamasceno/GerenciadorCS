@@ -1,3 +1,3 @@
 #Gerenciador de Contas e Senhas
 
-**gerenciadorcs** é um programa que gerencia contas de usuaŕios e senhas.
+**gerenciadorcs** é um gerenciador pessoal de contas, usuários e senhas.
