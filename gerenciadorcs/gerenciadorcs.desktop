@@ -1,7 +1,8 @@
 [Desktop Entry]
 Name=Gerenciadorcs
 Type=Application
-Categories=Development
+Categories=Accessories
+icon= /snap/current/png/icone_64x64.png
 Exec=python3.6 ${SNAP}/lib/python3.6/site-packages/gerenciadorcs/gerenciadorcs.py
 MimeType=text/html;
 Keywords=Development;Security;Keymanager
