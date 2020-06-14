@@ -4,5 +4,5 @@ Type=Application
 Name=Gerenciador CS
 Categories=Accessories
 Exec=python3.6 gerenciadorcs.py
-Icon=icone_64x64.png
+Icon=/snap/gerenciadorcs/current/png/icone_64x64.png
 Keywords=Security;Keymanager
