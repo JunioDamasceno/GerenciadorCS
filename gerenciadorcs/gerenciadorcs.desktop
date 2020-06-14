@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=2.2
+Type=Application
+Name=Gerenciador CS
+Categories=Accessories
+Exec=python3.6 gerenciadorcs.py
+Icon=icone_64x64.png
+Keywords=Security;Keymanager
