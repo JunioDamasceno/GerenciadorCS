@@ -2,7 +2,7 @@
 Version=2.2
 Type=Application
 Name=Gerenciador CS
-Categories=Accessories
+Categories=Development
 Exec=gerenciadorcs
 Icon=${SNAP}/meta/gui/gerenciadorcs.png
 Keywords=Security;Keymanager
