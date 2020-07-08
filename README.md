@@ -7,5 +7,5 @@ Notas da Versão 2.2:
 -Nova rebuild devido a atualizações de segurança do Ubuntu para sistemas operacionais baseados em Ubuntu.
 -Otimizações no fluxo do código.
 -Correção de ícones não exibidos na versão anterior.
-
+-Incluídas as entradas para o desktop e o menu de aplicativos do sistema
 
