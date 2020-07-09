@@ -32,4 +32,7 @@
     gerenciadorcs:
       command: python3.6 /snap/gerenciadorcs/current/lib/python3.6/site-packages/gerenciadorcs/gerenciadorcs.py
       extensions: [gnome-3-28]
+      plugs:
+      - desktop
+      - wayland
   
