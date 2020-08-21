@@ -17,4 +17,3 @@ Notas da Versão 3.0:
 -Melhorias na criação, leitura e alteração de tabelas.
 -Melhorias no sistema de gravação de dados binários.
 -Nova rebuild devido a atualizações de segurança do Ubuntu para sistemas operacionais baseados em Ubuntu.
-
