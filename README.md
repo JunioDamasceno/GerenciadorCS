@@ -3,6 +3,7 @@
 **gerenciadorcs** é um gerenciador de contas, usuários e senhas.
 
 Notas da Versão 3.0:
+
 -Mudanças no layout do programa.
 -A lista de contas, usuários e senhas é exibida assim que o usuário loga no sistema.
 -Os botões de operação do programa agora ficam na parte inferior.
