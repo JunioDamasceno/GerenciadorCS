@@ -357,8 +357,16 @@ class main_window:
 
             self.language_filter = self.lista.filter_new()
 
+            cabecalho = []
+            if idioma == ('pt_BR', 'UTF-8'):
+                cabecalho = ["Conta", "Usuário", "Senha"]
+            elif idioma == ('en_US', 'UTF-8'):
+                cabecalho = ["Account", "User", "Password"]
+            else:
+                cabecalho = ["Account", "User", "Password"]
+
             treeview = Gtk.TreeView.new_with_model(self.language_filter)
-            for i, column_title in enumerate(["Conta", "Usuário", "Senha"]):
+            for i, column_title in enumerate([cabecalho[0], cabecalho[1], cabecalho[2]]):
                 renderer = Gtk.CellRendererText()
                 column = Gtk.TreeViewColumn(column_title, renderer, text=i)
                 treeview.append_column(column)
