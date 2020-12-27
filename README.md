@@ -2,7 +2,7 @@
 
 **gerenciadorcs** é um gerenciador de contas, usuários e senhas.
 
-Notasda Versão 3.1:
+Notas da Versão 3.1:
 
 Inclusão do idioma Inglês
 
