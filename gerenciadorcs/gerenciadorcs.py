@@ -13,21 +13,20 @@ from tabelalista import tabelalista
 #Este módulo exclui dados dos arquivos binários.
 from excluir import excluir
 
-#Este módulo serve para exibir caixas de diálogo com
-#mensagens para o usuário
-from dialogo import dialogo
-
 #Este módulo altera dados nos arquivos binários
 from confirmar_alteração import confirmar_alteração
 
 #Este módulo grava dados nos arquivos binários
 from gravar_registro import gravar_registro
 
+#Este módulo serve para exibir caixas de diálogo com mensagens para os usuários
+from dialogo import dialogo
+
 import os
 import getpass
 import locale
 
-idioma = locale.getdefaultlocale()
+idioma = locale.getdefaultlocale() #Obtém a localização/País para fins de idioma
 system_user = getpass.getuser() #obtém o nome do usuário do sistema linux
 
 #Armazena o diretório dos arquivos binários nas variáveis
