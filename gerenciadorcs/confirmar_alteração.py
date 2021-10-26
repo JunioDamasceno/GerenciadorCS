@@ -133,6 +133,8 @@ def confirmar_alteração(aux, ac, nu, se, asu, conta_gravada, usuario_gravado, 
         msg_confirmar = 'Dados alterados com sucesso'
     elif idioma == ('en_US', 'UTF-8'):
         msg_confirmar = 'Successfully changed data'
+    elif idioma == ('es_ES', 'UTF-8'):
+        msg_confirmar = 'Datos modificados correctamente'
     else:
         msg_confirmar = 'Successfully changed data'
 

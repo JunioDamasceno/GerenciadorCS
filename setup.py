@@ -1,13 +1,14 @@
 from setuptools import setup
 
 setup( name = 'gerenciadorcs',
-       version = '3.1',
+       version = '3.2',
        author = 'Junio da Silva Damasceno',
        author_email = 'juniowin@yahoo.com.br',
        packages = ['gerenciadorcs'],
        data_files=[('glade',
                     ['gerenciadorcs/interface-en-US.glade',
-                     'gerenciadorcs/interface-pt-BR.glade'])],
+                     'gerenciadorcs/interface-pt-BR.glade',
+                     'gerenciadorcs/interface-ES.glade'])],
        description = 'um gerenciador de contas, usuários e senhas',
        url = 'https://github.com/JunioDamasceno/gerenciadorcs',
        license = 'MIT',

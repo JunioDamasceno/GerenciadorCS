@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.1 -->
+<!-- Generated with glade 3.22.2 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <object class="GtkWindow" id="main_window">
@@ -11,7 +11,7 @@
     <property name="icon">icone_64x64.png</property>
     <property name="has_resize_grip">True</property>
     <signal name="destroy" handler="on_main_window_destroy" swapped="no"/>
-    <child>
+    <child type="titlebar">
       <placeholder/>
     </child>
     <child>
@@ -27,7 +27,7 @@
               <object class="GtkMenuItem">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">_File</property>
+                <property name="label" translatable="yes">Archivo</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu">
@@ -88,7 +88,7 @@
             <child>
               <object class="GtkMenuItem">
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">_Edit</property>
+                <property name="label" translatable="yes">_Editar</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu">
@@ -137,7 +137,7 @@
             <child>
               <object class="GtkMenuItem">
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">_View</property>
+                <property name="label" translatable="yes">_Ver</property>
                 <property name="use_underline">True</property>
               </object>
             </child>
@@ -145,7 +145,7 @@
               <object class="GtkMenuItem">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">_Help</property>
+                <property name="label" translatable="yes">Ayuda</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu">
@@ -183,7 +183,7 @@
                 <property name="halign">start</property>
                 <property name="margin_top">20</property>
                 <property name="margin_bottom">20</property>
-                <property name="label" translatable="yes">Registered accounts and passwords</property>
+                <property name="label" translatable="yes">Menú: Ver cuentas registradas y contraseñas</property>
                 <property name="xalign">0</property>
               </object>
               <packing>
@@ -261,7 +261,7 @@
                 <property name="layout_style">start</property>
                 <child>
                   <object class="GtkButton" id="fechar">
-                    <property name="label" translatable="yes">Close</property>
+                    <property name="label" translatable="yes">Cerrar</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -275,7 +275,7 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="botao_alterar">
-                    <property name="label" translatable="yes">Change</property>
+                    <property name="label" translatable="yes">Alterar</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -290,7 +290,7 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="excluir_item">
-                    <property name="label" translatable="yes">Delete Item</property>
+                    <property name="label" translatable="yes">Eliminar</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -304,7 +304,7 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="botao_cadastrar1">
-                    <property name="label" translatable="yes">Register</property>
+                    <property name="label" translatable="yes">Registro</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -339,7 +339,7 @@
     <property name="window_position">center-always</property>
     <property name="type_hint">dialog</property>
     <property name="transient_for">main_window</property>
-    <child>
+    <child type="titlebar">
       <placeholder/>
     </child>
     <child internal-child="vbox">
@@ -409,21 +409,16 @@
     <property name="icon">icone_64x64.png</property>
     <property name="type_hint">dialog</property>
     <property name="transient_for">main_window</property>
-    <property name="program_name">Gerenciador de Contas e Senhas</property>
-    <property name="version">Versão 3.0</property>
+    <property name="program_name">Gerenciadorcs</property>
+    <property name="version">Versão 3.2</property>
     <property name="copyright" translatable="yes">Copyright Lion Design.</property>
-    <property name="comments" translatable="yes">The "Account and Password Manager" is a program developed by Junio da Silva Damasceno, owner of Lion Desing. This program is a secure platform where users can store their accounts and passwords. This program does not connect to the internet, does not store your data remotely and does not log in to any registered account. All the information that the user stores within this program is encrypted inside the user's computer. The purpose of creating this program was to provide a platform where the user can store the various accounts and passwords that he may eventually have. If the user does not remember in the future, he can use this program to retrieve the information.
-
-If you liked this program and want to
-make a symbolic donation in any amount
-feel free. By clicking on the Nubank link below,
-you can do it by QR Code, TED or DOC by any bank in Brazil.</property>
+    <property name="comments" translatable="yes">El "Administrador de cuentas y contraseñas" es un programa desarrollado por Junio da Silva Damasceno, propietario de Lion Desing. Este programa es una plataforma segura donde los usuarios pueden almacenar sus cuentas y contraseñas. Este programa no se conecta a Internet, no almacena sus datos de forma remota y no inicia sesión en ninguna cuenta registrada. Toda la información que el usuario almacena dentro de este programa está encriptada dentro de la computadora del usuario. El propósito de la creación de este programa fue proporcionar una plataforma donde el usuario pueda almacenar las diversas cuentas y contraseñas que eventualmente pueda poseer. Si el usuario no lo recuerda en el futuro puede recurrir a este programa para recuperar la información. Si te ha gustado este programa y quieres hacer una donación simbólica a cualquier valor quédate a vontate. Al hacer clic en el enlace de Nubank a continuación, puede hacerlo por código QR, TED o DOC por cualquier banco en Brasil.</property>
     <property name="website"> https://nubank.com.br/pagar/a04sz/5b1E66DC2g</property>
     <property name="website_label" translatable="yes">Link da Nubank</property>
     <property name="authors">Junio da Silva Damasceno</property>
     <property name="logo">../../../../../../snap/gerenciadorcs/current/meta/gui/gerenciadorcs.png</property>
     <property name="license_type">mit-x11</property>
-    <child>
+    <child type="titlebar">
       <placeholder/>
     </child>
     <child internal-child="vbox">
@@ -451,13 +446,12 @@ you can do it by QR Code, TED or DOC by any bank in Brazil.</property>
           <object class="GtkLabel">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">
-Versão 3.0
-Developed by Lion Design
-Owner: Junio da Silva Damasceno
-Contry: Brazil
-Contact: juniowin@yahoo.com.br
-Phone: 5531982580469</property>
+            <property name="label" translatable="yes">Versión 3.2 
+Desarrollado por Lion Design 
+Propietario: Junio da Silva Damasceno 
+País: Brasil 
+Contacto: juniowin@yahoo.com.br 
+Teléfono: 5531982580469</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -479,7 +473,7 @@ Phone: 5531982580469</property>
     <property name="type_hint">dialog</property>
     <property name="transient_for">main_window</property>
     <signal name="destroy" handler="on_login_destroy" swapped="no"/>
-    <child>
+    <child type="titlebar">
       <placeholder/>
     </child>
     <child internal-child="vbox">
@@ -512,7 +506,7 @@ Phone: 5531982580469</property>
             </child>
             <child>
               <object class="GtkButton" id="pref_fechar">
-                <property name="label" translatable="yes">Close</property>
+                <property name="label" translatable="yes">Cerrar</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -525,8 +519,8 @@ Phone: 5531982580469</property>
             </child>
             <child>
               <object class="GtkButton" id="pref_cnusuario">
-                <property name="label" translatable="yes">Register a
-New User</property>
+                <property name="label" translatable="yes">Registro 
+nuevo usuario</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -557,8 +551,9 @@ New User</property>
                 <property name="can_focus">False</property>
                 <property name="margin_left">11</property>
                 <property name="margin_right">10</property>
-                <property name="label" translatable="yes">Welcome to the Account and Password Manager!
-Enter credentials or register a new user.</property>
+                <property name="label" translatable="yes">Bienvenido al Administrador de cuentas y contraseñas! 
+Ingrese con credenciales 
+o regístrese para obtener un nuevo usuario.</property>
                 <property name="justify">center</property>
               </object>
               <packing>
@@ -603,7 +598,7 @@ Enter credentials or register a new user.</property>
                 <property name="can_focus">False</property>
                 <property name="margin_top">10</property>
                 <property name="margin_bottom">2</property>
-                <property name="label" translatable="yes">User:</property>
+                <property name="label" translatable="yes">Usuario:</property>
                 <property name="xalign">0</property>
               </object>
               <packing>
@@ -633,7 +628,7 @@ Enter credentials or register a new user.</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="margin_bottom">2</property>
-                <property name="label" translatable="yes">Password:</property>
+                <property name="label" translatable="yes">Contraseña:</property>
                 <property name="xalign">0</property>
               </object>
               <packing>
@@ -680,7 +675,7 @@ Enter credentials or register a new user.</property>
     <property name="can_focus">False</property>
     <property name="type_hint">dialog</property>
     <property name="transient_for">login</property>
-    <child>
+    <child type="titlebar">
       <placeholder/>
     </child>
     <child internal-child="vbox">
@@ -708,7 +703,7 @@ Enter credentials or register a new user.</property>
             </child>
             <child>
               <object class="GtkButton" id="button4">
-                <property name="label" translatable="yes">Cancel</property>
+                <property name="label" translatable="yes">Cancelar</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -733,7 +728,7 @@ Enter credentials or register a new user.</property>
             <property name="halign">start</property>
             <property name="margin_top">10</property>
             <property name="margin_bottom">2</property>
-            <property name="label" translatable="yes">User Name:</property>
+            <property name="label" translatable="yes">Nombre de usuario:</property>
             <property name="xalign">0</property>
           </object>
           <packing>
@@ -761,7 +756,7 @@ Enter credentials or register a new user.</property>
             <property name="can_focus">False</property>
             <property name="halign">start</property>
             <property name="margin_bottom">2</property>
-            <property name="label" translatable="yes">Password:</property>
+            <property name="label" translatable="yes">Contraseña:</property>
             <property name="xalign">0</property>
           </object>
           <packing>
@@ -799,7 +794,7 @@ Enter credentials or register a new user.</property>
     <property name="type_hint">dialog</property>
     <property name="transient_for">main_window</property>
     <signal name="delete-event" handler="on_window_alterar_delete_event" swapped="no"/>
-    <child>
+    <child type="titlebar">
       <placeholder/>
     </child>
     <child internal-child="vbox">
@@ -813,7 +808,8 @@ Enter credentials or register a new user.</property>
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="botao_confirmar_alteracao">
-                <property name="label" translatable="yes">Confirm change</property>
+                <property name="label" translatable="yes">Confirmar 
+alteración</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -827,7 +823,7 @@ Enter credentials or register a new user.</property>
             </child>
             <child>
               <object class="GtkButton" id="botao_voltara">
-                <property name="label" translatable="yes">Back</property>
+                <property name="label" translatable="yes">Regresa</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -858,7 +854,7 @@ Enter credentials or register a new user.</property>
                 <property name="halign">start</property>
                 <property name="margin_top">20</property>
                 <property name="margin_bottom">20</property>
-                <property name="label" translatable="yes">Change a registered account or password</property>
+                <property name="label" translatable="yes">Menú: Cambiar una cuenta o contraseña registrada</property>
                 <property name="xalign">0</property>
               </object>
               <packing>
@@ -873,8 +869,8 @@ Enter credentials or register a new user.</property>
                 <property name="can_focus">False</property>
                 <property name="halign">start</property>
                 <property name="margin_bottom">2</property>
-                <property name="label" translatable="yes">Account Name:
-Fill in only if you want to change the account name.</property>
+                <property name="label" translatable="yes">Nombre de la cuenta: 
+Rellene sólo si desea cambiar el nombre de la cuenta</property>
                 <property name="xalign">0</property>
               </object>
               <packing>
@@ -902,8 +898,8 @@ Fill in only if you want to change the account name.</property>
                 <property name="can_focus">False</property>
                 <property name="halign">start</property>
                 <property name="margin_bottom">2</property>
-                <property name="label" translatable="yes">Nome de Usuário:
-Fill in only if you want to change the user name.</property>
+                <property name="label" translatable="yes">Nombre de usuario:
+Rellene solo si desea cambiar el nombre de usuario.</property>
                 <property name="xalign">0</property>
               </object>
               <packing>
@@ -931,8 +927,8 @@ Fill in only if you want to change the user name.</property>
                 <property name="can_focus">False</property>
                 <property name="halign">start</property>
                 <property name="margin_bottom">2</property>
-                <property name="label" translatable="yes">New Password:
-Mandatory, if not changing, repeat the current one.</property>
+                <property name="label" translatable="yes">Nueva contraseña: 
+Obligatorio, si no va a cambiar, repita el actual.</property>
                 <property name="xalign">0</property>
               </object>
               <packing>
@@ -968,7 +964,7 @@ Mandatory, if not changing, repeat the current one.</property>
     <property name="can_focus">False</property>
     <property name="type_hint">dialog</property>
     <property name="transient_for">main_window</property>
-    <child>
+    <child type="titlebar">
       <placeholder/>
     </child>
     <child internal-child="vbox">
@@ -982,7 +978,8 @@ Mandatory, if not changing, repeat the current one.</property>
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="botao_gravar_registro">
-                <property name="label" translatable="yes">Record</property>
+                <property name="label" translatable="yes">Grabar 
+Registro</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -996,7 +993,7 @@ Mandatory, if not changing, repeat the current one.</property>
             </child>
             <child>
               <object class="GtkButton" id="botao_voltarc">
-                <property name="label" translatable="yes">Back</property>
+                <property name="label" translatable="yes">Regresa</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1027,7 +1024,7 @@ Mandatory, if not changing, repeat the current one.</property>
                 <property name="halign">start</property>
                 <property name="margin_top">20</property>
                 <property name="margin_bottom">20</property>
-                <property name="label" translatable="yes">Register a new account and password</property>
+                <property name="label" translatable="yes">Menú: Registrar una nueva cuenta y contraseña</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -1041,7 +1038,7 @@ Mandatory, if not changing, repeat the current one.</property>
                 <property name="can_focus">False</property>
                 <property name="halign">start</property>
                 <property name="margin_bottom">2</property>
-                <property name="label" translatable="yes">Account Name (ex. Hotmail, Gmail, Netflix, GitHub, etc.)</property>
+                <property name="label" translatable="yes">Nombre de la cuenta (por ejemplo, Hotmail, Gmail, Netflix, GitHub, etc.)</property>
                 <property name="xalign">0</property>
               </object>
               <packing>
@@ -1069,7 +1066,7 @@ Mandatory, if not changing, repeat the current one.</property>
                 <property name="can_focus">False</property>
                 <property name="halign">start</property>
                 <property name="margin_bottom">2</property>
-                <property name="label" translatable="yes">User Name (ex. felipe@hotmail.com, Anal.Flores, etc.)</property>
+                <property name="label" translatable="yes">Nombre de usuario (por ejemplo, felipe@hotmail.com, Anal.Flores, etc.)</property>
                 <property name="xalign">0</property>
               </object>
               <packing>
@@ -1097,7 +1094,7 @@ Mandatory, if not changing, repeat the current one.</property>
                 <property name="can_focus">False</property>
                 <property name="halign">start</property>
                 <property name="margin_bottom">2</property>
-                <property name="label" translatable="yes">Password</property>
+                <property name="label" translatable="yes">Contraseña</property>
                 <property name="xalign">0</property>
               </object>
               <packing>

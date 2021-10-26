@@ -149,9 +149,10 @@ def excluir(aux, ac, nu, se, asu, conta_ch, user_ch, sx_ch):
         msg_excluir = ''
         if idioma == ('pt_BR', 'UTF-8'):
             msg_excluir = "Item excluído da lista com sucesso!"
-
         elif idioma == ('en_US', 'UTF-8'):
             msg_excluir = "Item successfully deleted from the list!"
+        elif idioma == ('es_ES', 'UTF-8'):
+            msg_excluir = "Elemento eliminado de la lista con éxito!"
         else:
             msg_excluir = "Item successfully deleted from the list!"
 

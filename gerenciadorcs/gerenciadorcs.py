@@ -182,7 +182,8 @@ class main_window:
 
                     elif idioma == ('en_US', 'UTF-8'):
                         mlogin = "correct password, login successfully!"
-                        
+                    elif idioma == ('es_ES', 'UTF-8'):
+                        mlogin = "contraseña correcta, inicio de sesión realizado con éxito!" 
                     else:
                         mlogin = "correct password, login successfully!"
     
@@ -194,9 +195,10 @@ class main_window:
                     print("senha incorreta!")
                     if idioma == ('pt_BR', 'UTF-8'):
                         mlogin = "Usuário e/ou senha incorretas!"
-
                     elif idioma == ('en_US', 'UTF-8'):
                         mlogin = "Username and / or password incorrect!"
+                    elif idioma == ('es_ES', 'UTF-8'):
+                        mlogin = "Usuario y/o contraseña incorrectos!"
                         
                     else:
                         mlogin = "Username and / or password incorrect!"
@@ -253,9 +255,10 @@ class main_window:
 
                             if idioma == ('pt_BR', 'UTF-8'):
                                 mnuser = 'Você não pode deixar campos em branco!'
-
                             elif idioma == ('en_US', 'UTF-8'):
                                 mnuser = 'You cannot leave fields blank!'
+                            elif idioma ==('es_ES', 'UTF-8'):
+                                mnuser = "No puedes dejar los campos en blanco!"
                             else:
                                 mnuser = 'you cannot leave fields blank!'
                             self.dialogo_c(self.dialogo, self.rotulo, mnuser)
@@ -289,9 +292,10 @@ class main_window:
                     if (self.chave_check == 1):
                         if idioma == ('pt_BR', 'UTF-8'):
                             mnuser = "Nome de usuário já cadastrado, tente outro nome!"
-
                         elif idioma == ('en_US', 'UTF-8'):
                             mnuser = "Username already registered, try another name!"
+                        elif idioma == ('es_ES', 'UTF-8'):
+                            mnuser = "Nombre de usuario ya registrado, pruebe con otro nombre!"
                         else:
                             mnuser = "Username already registered, try another name!"
                         
@@ -327,9 +331,10 @@ class main_window:
 
                         if idioma == ('pt_BR', 'UTF-8'):
                             mnuser = "usuário cadastrado com sucesso, faça login para acessar o programa!"
-
                         elif idioma == ('en_US', 'UTF-8'):
                             mnuser = "user registered successfully, login to access the program!"
+                        elif idioma == ('es_ES', 'UTF-8'):
+                            mnuser = "usuario registrado con éxito, inicie sesión para acceder al programa!"
                         else:
                             mnuser = "user registered successfully, login to access the program!"
                         
@@ -362,6 +367,8 @@ class main_window:
                 cabecalho = ["Conta", "Usuário", "Senha"]
             elif idioma == ('en_US', 'UTF-8'):
                 cabecalho = ["Account", "User", "Password"]
+            elif idioma == ('es_ES', 'UTF-8'):
+                cabecalho = ["Cuenta", "Usuario", "Contraseña"]
             else:
                 cabecalho = ["Account", "User", "Password"]
 
@@ -449,11 +456,13 @@ class main_window:
             msg_nexcluir = ''
             if idioma == ('pt_BR', 'UTF-8'):
                 msg_nexcluir = "Nenhum item foi selecionado para exclusão!"
-
             elif idioma == ('en_US', 'UTF-8'):
                 msg_nexcluir = "No items were selected for deletion!"
+            elif idioma == ('es_ES', 'UTF-8'):
+                msg_nexcluir = "No se ha seleccionado ningún elemento para su eliminación!"   
             else:
                 msg_nexcluir = "No items were selected for deletion!"
+
             self.dialogo_c(self.dialogo, self.rotulo, msg_nexcluir)
             self.conta_ch = ""
             self.user_ch = ""
@@ -502,10 +511,10 @@ class main_window:
             msg_cb = ""
             if idioma == ('pt_BR', 'UTF-8'):
                 msg_cb = "Nenhum campo pode estar em branco!"
-                
             elif idioma == ('en_US', 'UTF-8'):
                 msg_cb = "No field can be empty!"
-
+            elif idioma == ('es_ES', 'UTF-8'):
+                msg_cb = "Ningún campo puede estar en blanco!"
             else:
                 msg_cb = "No field can be empty!"
 
@@ -520,7 +529,7 @@ class main_window:
             msg_gravar = gravar_registro(self.aux, conta_name, nome_usuario, conta_ps, ac, nu, se, asu, self.tabela_ux)
             self.dialogo_c(self.dialogo, self.rotulo, msg_gravar)
 
-            if (msg_gravar == "Dados Gravados com Sucesso" or msg_gravar == "Data Saved Successfully"):
+            if (msg_gravar == "Dados Gravados com Sucesso" or msg_gravar == "Data Saved Successfully" or msg_gravar == "Datos registrados correctamente"):
                 #Fecha a caixa de dialogo 'window_cadastrar' e apaga os campos digitados
                 self.cadastrar.hide()
                 self.conta_name.set_text("")
@@ -565,6 +574,8 @@ class main_window:
                 msg_selecione_item = "Selecione um item da lista para alterar"
             elif idioma == ('en_US', 'UTF-8'):
                 msg_selecione_item = "Select an item from the list to change"
+            elif idioma == ('es_ES', 'UTF-8'):
+                msg_selecione_item = "Seleccione un elemento de la lista para cambiarlo"   
             else:
                 msg_selecione_item = "Select an item from the list to change"
                 
@@ -606,9 +617,12 @@ class main_window:
         if (senha_nova == ""): #Não é permitido deixar o campo de senha em branco
             msg_senha_vazia = ''
             if idioma == ('pt_BR', 'UTF-8'):
-                msg_senha_vazia = 'Você não pode cadastrar uma senha em branco'
+                msg_senha_vazia = "Você não pode cadastrar uma senha em branco"
             elif idioma == ('en_US', 'UTF-8'):
-                msg_senha_vazia = 'You cannot register a blank password'
+                msg_senha_vazia = "You cannot register a blank password"
+            elif idioma == ('es_ES', 'UTF-8'):
+                msg_senha_vazia = "No puedes registrar una contraseña en blanco"
+                
             else:
                 msg_senha_vazia = 'You cannot register a blank password'
             self.dialogo_c(self.dialogo, self.rotulo, msg_senha_vazia)

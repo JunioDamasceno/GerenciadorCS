@@ -15,10 +15,10 @@ def gravar_registro(aux, conta_name, nome_usuario, conta_ps, ac, nu, se, asu, ta
     if (chave == 1):
         if idioma == ('pt_BR', 'UTF-8'):
             msg_gravar = "Não foi possível cadastrar pois, o ítem já foi cadastrado, o sistema não aceita dados duplicados!"
-
         elif idioma == ('en_US', 'UTF-8'):
             msg_gravar = "It was not possible to register because the item has already been registered, the system does not accept duplicate data!"
-
+        elif idioma == ('es_ES', 'UTF-8'):
+            msg_gravar = "No fue posible registrarse porque, el ittem ya ha sido registrado, ¡el sistema no acepta datos duplicados!"
         else:
             msg_gravar = "It was not possible to register because the item has already been registered, the system does not accept duplicate data!"
     
@@ -51,10 +51,10 @@ def gravar_registro(aux, conta_name, nome_usuario, conta_ps, ac, nu, se, asu, ta
 
         if idioma == ('pt_BR', 'UTF-8'):
             msg_gravar = "Dados Gravados com Sucesso"
-
         elif idioma == ('en_US', 'UTF-8'):
             msg_gravar = "Data Saved Successfully"
-
+        elif idioma == ('es_ES', 'UTF-8'):
+            msg_gravar = "Datos registrados correctamente"
         else:
             msg_gravar = "Data Saved Successfully"
         
