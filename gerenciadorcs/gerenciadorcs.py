@@ -19,6 +19,8 @@ from confirmar_alteração import confirmar_alteração
 #Este módulo grava dados nos arquivos binários
 from gravar_registro import gravar_registro
 
+from cadastrar_usuario import cadastrar_usuario
+
 #Este módulo serve para exibir caixas de diálogo com mensagens para os usuários
 from dialogo import dialogo
 
@@ -219,130 +221,36 @@ class main_window:
             #o conjunto de instruções abaixo, pois a variável 'response' recebe
             #o valor de 'aceitar'
             if response == Gtk.ResponseType.ACCEPT:
-                #Estas variáveis são chaves utilizadas para verificar se o nome
-                #de usuário que se quer cadastrar já existe ou não no sistema.
-                ad = 0
-                nuser = 0
-                self.chave_nuser = 1
-
-                while(self.chave_nuser == 1):
-                    #Habilita os campos pra criar novo usuário e senha
-                    #Exibe a caixa de dialogo "new_user"
-                    self.user_name = self.builder.get_object("user_name")
-                    self.user_p = self.builder.get_object("user_p")
-                    self.new_user.show()
-                    #Esta variável armazena a resposta que o usuario envia
-                    #na caixa de diálogo 'new_user'
-                    response3 = self.new_user.run()
-                    #Se a resposta for 'OK' ele executa as instruções abaixo
-                    if response3 == Gtk.ResponseType.OK:
-                        #Armazena os valores digitados nos campos de
-                        #'Nome de usuário' e de 'senha' e verifica se o usuário
-                        #existe ou não no banco de dados de usuário
-                        nuser = self.user_name.get_text()
-                        nuser = nuser.encode('utf-8')
-                        nuser = nuser.hex()
-                        userp = self.user_p.get_text()
-                        userp = userp.encode('utf-8')
-                        userp = userp.hex()
-                        #Serve para impedir que o usuário tente cadastrar um
-                        #usuário sem senha, ou uma senha sem nome de usuário
-                        #Se os dois campos tiverem preenchidos ele verifica se
-                        #o nome do usuário já existe no banco de dados
-                        mnuser = ''
-                        if (nuser == "" or userp == ""):
-
-                            if idioma == ('pt_BR', 'UTF-8'):
-                                mnuser = 'Você não pode deixar campos em branco!'
-                            elif idioma == ('en_US', 'UTF-8'):
-                                mnuser = 'You cannot leave fields blank!'
-                            elif idioma ==('es_ES', 'UTF-8'):
-                                mnuser = "No puedes dejar los campos en blanco!"
-                            else:
-                                mnuser = 'you cannot leave fields blank!'
-                            self.dialogo_c(self.dialogo, self.rotulo, mnuser)
-                            ad = nuser
-                        else:
-                            user_check = open(ux, 'r')
-                            for linha in user_check:
-                                linha = linha.rstrip()
-                                #a variável ad armazena cada linha do arquivo uma por vez
-                                ad = linha
-                                #Se o valor contido em alguma linha corresponder ao
-                                #ao nome do usuário o valor de 'self.chave_check' será 1
-                                if (ad == nuser):
-                                    print(ad, nuser)
-                                    self.chave_check = 1
-                            user_check.seek(0)
-                            user_check.close()
-                            
-                    #Se o usuário clicar em 'cancelar' na caixa de diálogo 'new_user'
-                    if response3 == Gtk.ResponseType.CANCEL:
+                self.user_name = self.builder.get_object("user_name")
+                self.user_p = self.builder.get_object("user_p")
+                self.new_user.show()
+                response3 = self.new_user.run()
+                chave_cadastrar = 0
+                while ( chave_cadastrar == 0):
+                    if (response3 == Gtk.ResponseType.OK):
+                        cadastrar = cadastrar_usuario(self.user_name.get_text(), self.user_p.get_text(), idioma, ux, sx)
+                        if (cadastrar[1] == 0):
+                            self.dialogo_c(self.dialogo, self.rotulo, cadastrar[0])
+                            self.user_name.set_text("")
+                            self.user_p.set_text("")
+                            response3 = self.new_user.run()
+                        if (cadastrar[1] == 1):
+                            self.dialogo_c(self.dialogo, self.rotulo, cadastrar[0])
+                            self.user_name.set_text("")
+                            self.user_p.set_text("")
+                            response3 = self.new_user.run()
+                        if (cadastrar[1] == 2):
+                            self.dialogo_c(self.dialogo, self.rotulo, cadastrar[0])
+                            self.user_name.set_text("")
+                            self.user_p.set_text("")
+                            self.new_user.hide()
+                            chave_cadastrar = 1
+                            self.new_user.close()
+                    if response3 == Gtk.ResponseType.CANCEL or response3 == Gtk.ResponseType.DELETE_EVENT:
                         self.user_name.set_text("")
                         self.user_p.set_text("")
                         self.new_user.hide()
-                        self.chave_check = 2
-                        self.chave_nuser = 0
-
-                    #Se o usuário já existir a variável 'chave_check assume o valor 1,
-                    #e exibe a caixa de diálogo com a mensagem contida em 'mnuser2',
-                    #Zera o valor armazenado nos campos Nome do usuário e Senha
-                    #e o 'While' retorna ao início pois a condição não foi satisfeita.
-                    if (self.chave_check == 1):
-                        if idioma == ('pt_BR', 'UTF-8'):
-                            mnuser = "Nome de usuário já cadastrado, tente outro nome!"
-                        elif idioma == ('en_US', 'UTF-8'):
-                            mnuser = "Username already registered, try another name!"
-                        elif idioma == ('es_ES', 'UTF-8'):
-                            mnuser = "Nombre de usuario ya registrado, pruebe con otro nombre!"
-                        else:
-                            mnuser = "Username already registered, try another name!"
-                        
-                        self.dialogo_c(self.dialogo, self.rotulo, mnuser)
-                        self.user_name.set_text("")
-                        self.user_p.set_text("")
-                        ad = ""
-                        nuser = ""
-                        self.chave_check = 2
-                        self.chave_nuser = 1
-                        
-                    #A variável ad serve apenas para verificar se o Nome de usuário
-                    #existe ou não no banco de dados, se não existir o valor da
-                    #variável 'self.chave_check' será 0.
-                    if (ad != nuser):
-                        self.chave_check = 0
-
-                    #Se o valor de 'self.chave_check' for 0 ele executa as instruções
-                    #abaixo, que basicamente é: armazenar o nome de usuário e senha
-                    #do novo usuário no banco de dados, exibir a caixa de diálogo
-                    #com a mensagem contida em 'mnuser3', assim que o usuário fechar
-                    #a caixa de diálogo ele fecha a caixa de diálogo 'new_user' e
-                    # volta a janela de 'login'.
-                    if (self.chave_check == 0):
-                        arq_ux = open(ux, 'a+')
-                        arq_sx = open(sx, 'a+')
-                        arq_ux.write("{}\n".format(nuser))
-                        arq_sx.write("{}\n".format(userp))
-                        arq_ux.seek(0)
-                        arq_sx.seek(0)
-                        arq_ux.close()
-                        arq_sx.close()
-
-                        if idioma == ('pt_BR', 'UTF-8'):
-                            mnuser = "usuário cadastrado com sucesso, faça login para acessar o programa!"
-                        elif idioma == ('en_US', 'UTF-8'):
-                            mnuser = "user registered successfully, login to access the program!"
-                        elif idioma == ('es_ES', 'UTF-8'):
-                            mnuser = "usuario registrado con éxito, inicie sesión para acceder al programa!"
-                        else:
-                            mnuser = "user registered successfully, login to access the program!"
-                        
-                        self.dialogo_c(self.dialogo, self.rotulo, mnuser)
-                        self.user_name.set_text("")
-                        self.user_p.set_text("")
-                        self.new_user.hide()
-                        self.chave_nuser = 0
-                        
+                        chave_cadastrar = 1
                 
         #Se usuário e senha estiverem corretos ele exibe o 'menu' do sistema.
         if (cux == csx):
