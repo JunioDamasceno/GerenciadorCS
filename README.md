@@ -7,6 +7,7 @@ Notas da Versão 3.2:
 -Agora o Gerenciador CS está disponível em português-BR, Inglês e Espanhol;
 -Mudanças no layout do programa;
 -Nova rebuild devido a atualizações de segurança do Ubuntu para sistemas operacionais baseados em Ubuntu.
+-Atualização para reduzir o uso/reserva de memória e variáveis.
 
 
 "Genciadorcs" is an account manager, users and passwords. 
@@ -15,6 +16,7 @@ Release 3.2 Notes:
 -Now the Gerenciadorcs is available in Portuguese-BR, English and Spanish;
 -Changes in the layout of the program;
 -New rebuild due to Ubuntu security updates for Ubuntu-based operating systems.
+-Update for reduce memory use/reserve and variables.
 
 "Gerenciadorcs es un gestor de cuentas, usuarios y contraseñas.
 -Notas de la versión 3.2:
