@@ -21,6 +21,8 @@ from gravar_registro import gravar_registro
 
 from cadastrar_usuario import cadastrar_usuario
 
+from login import login
+
 #Este módulo serve para exibir caixas de diálogo com mensagens para os usuários
 from dialogo import dialogo
 
@@ -109,17 +111,7 @@ class main_window:
         #Estas variáveis funcionam como chaves que operam 'While' e 'if'
         #na janela de 'login'
         self.chave = 1
-        self.chave_nuser = 1
-        self.chave_check = 2
-
-        #As duas variáveis abaixo funcionam como chaves para verificar
-        #se usuário e senha estão corretos, na janela de 'login'.
-        cux = -1
-        csx = 0
-
-        #Estas variáveis são apenas contadores, por exemplo, iux = iux + 1.
-        iux = 0
-        isx = 0
+        self.ulogin = ("", 0)
                 
         while (self.chave == 1):
             #Ativa os campos para inserir usuário e senha
@@ -139,87 +131,42 @@ class main_window:
             #e verifica se a combinação e verdadeira no banco de dados de usuário
             #e de senha.
             if (response == Gtk.ResponseType.OK):
-                aux = self.msg_aux.get_text()
-                aux = aux.encode('utf-8')
-                aux = aux.hex()
-                pux = self.msg_pux.get_text()
-                pux = pux.encode('utf-8')
-                pux = pux.hex()
-                arq_ux = open(ux, 'r')
-                arq_sx = open(sx, 'r')
-                
-                for linha in arq_ux:
-                    linha = linha.rstrip()
-                    iux = iux + 1
-                    if (linha == aux):
-                        cux = iux
-                arq_ux.seek(0)
-                arq_ux.close()
-                
-                for linha in arq_sx:
-                    linha = linha.rstrip()
-                    isx = isx + 1
-                    if (linha == pux):
-                        if (csx < cux):
-                            csx = isx
-                arq_sx.seek(0)
-                arq_sx.close()
 
-                #Se usuário e senha digitados existirem no banco de dados de
-                #usuário e de senha e forem correspondentes ele executa o conjunto
-                #de instruções abaixo: Abre caixa de diálogo e exibe a mensagem
-                #armazenada em 'mlogin1', quando o usuário fechar a caixa de
-                #diálogo clicando em 'OK' ou em 'sair' ele fecha janela de 'login'
-                #e finaliza o 'while' mudando o valor de 'chave' para 0.
-                #Caso usuário e senha digitados não existam no banco dedados de
-                #usuário e de senha correspondentes ele abre a caixa de diálogo
-                #e mostra a mensagem armazenada em 'mlogin2'. A condição de 'while'
-                #não foi atendida, portanto ele volta ao início do 'while'.
-                mlogin = ''
-                if (cux == csx):
-                    print("senha correta!")
-                    if idioma == ('pt_BR', 'UTF-8'):
-                        mlogin = "senha correta, login efetuado com sucesso!"
-
-                    elif idioma == ('en_US', 'UTF-8'):
-                        mlogin = "correct password, login successfully!"
-                    elif idioma == ('es_ES', 'UTF-8'):
-                        mlogin = "contraseña correcta, inicio de sesión realizado con éxito!" 
-                    else:
-                        mlogin = "correct password, login successfully!"
-    
-                    self.dialogo_c(self.dialogo, self.rotulo, mlogin)
+                self.ulogin = login(self.msg_aux.get_text(), self.msg_pux.get_text(), idioma, ux, sx)
+                if (self.ulogin[1] == 0):
+                    self.dialogo_c(self.dialogo, self.rotulo, self.ulogin[0])
+                    self.msg_aux.set_text("")
+                    self.msg_pux.set_text("")
+                    response = self.login.run()
+                if(self.ulogin[1] == 1):
+                    self.dialogo_c(self.dialogo, self.rotulo, self.ulogin[0])
+                    self.msg_aux.set_text("")
+                    self.msg_pux.set_text("")
+                    response = self.login.run()
+                if(self.ulogin[1] == 2):
+                    self.dialogo_c(self.dialogo, self.rotulo, self.ulogin[0])
+                    self.aux = self.msg_aux.get_text().encode('utf-8').hex()
+                    self.msg_aux.set_text("")
+                    self.msg_pux.set_text("")
                     self.login.hide()
-                    self.aux = aux #armazena o nome do usuário logado em 'self.aux'
                     self.chave = 0
-                else:
-                    print("senha incorreta!")
-                    if idioma == ('pt_BR', 'UTF-8'):
-                        mlogin = "Usuário e/ou senha incorretas!"
-                    elif idioma == ('en_US', 'UTF-8'):
-                        mlogin = "Username and / or password incorrect!"
-                    elif idioma == ('es_ES', 'UTF-8'):
-                        mlogin = "Usuario y/o contraseña incorrectos!"
-                        
-                    else:
-                        mlogin = "Username and / or password incorrect!"
-
-                    self.dialogo_c(self.dialogo, self.rotulo, mlogin)                    
-
-            #Se o usuário clicar no botão "fechar ou no botão "sair" no topo
-            #direito da janela de login ele fecha a janela de login e a
-            #janela principal do programa, finalizando a execução como um todo.
-            #Há uma duas funções 'on_login_destroy' e 'on_main_window_destroy'
-            #que estão no final do código que complementam este comando.
-            #Estas funções também foram definidas no arquivo 'interface.glade'.
+            '''
+            Se o usuário clicar no botão "fechar ou no botão "sair" no topo
+            direito da janela de login ele fecha a janela de login e a
+            janela principal do programa, finalizando a execução como um todo.
+            Há uma duas funções: 'on_login_destroy' e 'on_main_window_destroy'
+            que estão no final do código que complementam este comando.
+            Estas funções também foram definidas no arquivo 'interface.glade'.
+            '''
             if response == Gtk.ResponseType.DELETE_EVENT:
                 self.login.close()
                 self.main_window.close()
                 self.chave = 0
-
-            #Se o usuário clicar no botão 'cadastrar novo usuário' ele executa
-            #o conjunto de instruções abaixo, pois a variável 'response' recebe
-            #o valor de 'aceitar'
+            '''
+            Se o usuário clicar no botão 'cadastrar novo usuário' ele executa 
+            o conjunto de instruções abaixo, pois a variável 'response' recebe
+            o valor de 'aceitar'
+            '''
             if response == Gtk.ResponseType.ACCEPT:
                 self.user_name = self.builder.get_object("user_name")
                 self.user_p = self.builder.get_object("user_p")
@@ -252,8 +199,8 @@ class main_window:
                         self.new_user.hide()
                         chave_cadastrar = 1
                 
-        #Se usuário e senha estiverem corretos ele exibe o 'menu' do sistema.
-        if (cux == csx):
+        # Se usuário e senha estiverem corretos ele exibe o 'menu' do sistema.
+        if (self.ulogin[1] == 2):
 
             self.exibir.show()
 
