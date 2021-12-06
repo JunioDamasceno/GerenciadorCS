@@ -1,6 +1,6 @@
 
   name: gerenciadorcs
-  version: '3.1'
+  version: '3.2'
   summary: Um gerenciador de contas e senhas
   description: |
     O gerenciador de Contas e Senhas é uma plataforma onde usuários podem armazenar contas, usuários e senhas de forma segura. Toda informação fica criptografada no computador do usuário. Este programa não se conecta a internet, não armazena dados em núvem e não coleta informações privadas.
@@ -27,7 +27,7 @@
         
   apps:
     gerenciadorcs:
-      command: python3.6 /snap/gerenciadorcs/current/lib/python3.6/site-packages/gerenciadorcs/gerenciadorcs.py
+      command: python3.8 /snap/gerenciadorcs/current/lib/python3.6/site-packages/gerenciadorcs/gerenciadorcs.py
       extensions: [gnome-3-28]
       plugs:
       - desktop
