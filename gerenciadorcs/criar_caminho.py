@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# encoding: utf-8
+
 import os
 import getpass
 
@@ -47,6 +50,5 @@ def verificar_arquivos():
 
     else:
         print('os arquivos necessários não foram criados, pois já existem')
-
-arquivos = verificar_arquivos()
         
+verificar_arquivos()

@@ -30,6 +30,7 @@ import os
 import getpass
 import locale
 
+verificar_arquivos()
 idioma = locale.getdefaultlocale() #Obtém a localização/País para fins de idioma
 system_user = getpass.getuser() #obtém o nome do usuário do sistema linux
 
