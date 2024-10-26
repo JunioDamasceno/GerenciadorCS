@@ -2,6 +2,12 @@
 
 **gerenciadorcs** é um gerenciador de contas, usuários e senhas.
 
+Notas da Versão 3.2.1:
+- Mudanças na aba sobre "about".
+- Foi adicionado o link do Github do projeto.
+- Foi adicionado dados bancários do banco Sicoob para doações no Brasil.
+- Foi adicionado carteira de criptomoedas para doações em Bitcoin.
+
 Notas da Versão 3.2:
 -Inclusão do idioma espanhol;
 -Agora o Gerenciador CS está disponível em português-BR, Inglês e Espanhol;
