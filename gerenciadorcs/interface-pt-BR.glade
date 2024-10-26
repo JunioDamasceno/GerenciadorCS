@@ -1,83 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.1 -->
+<!-- Generated with glade 3.40.0 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <object class="GtkWindow" id="main_window">
-    <property name="can_focus">False</property>
+    <property name="can-focus">False</property>
     <property name="title" translatable="yes">Gerenciador de Contas e Senhas</property>
-    <property name="window_position">center</property>
-    <property name="default_width">600</property>
-    <property name="default_height">450</property>
+    <property name="window-position">center</property>
+    <property name="default-width">600</property>
+    <property name="default-height">450</property>
     <property name="icon">icone_64x64.png</property>
-    <property name="has_resize_grip">True</property>
     <signal name="destroy" handler="on_main_window_destroy" swapped="no"/>
-    <child>
-      <placeholder/>
-    </child>
     <child>
       <object class="GtkBox" id="caixa_principal">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkMenuBar" id="barra_menu">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <child>
               <object class="GtkMenuItem">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">_Arquivo</property>
-                <property name="use_underline">True</property>
+                <property name="use-underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can-focus">False</property>
                     <child>
                       <object class="GtkImageMenuItem">
                         <property name="label">gtk-new</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="use-underline">True</property>
+                        <property name="use-stock">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkImageMenuItem">
                         <property name="label">gtk-open</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="use-underline">True</property>
+                        <property name="use-stock">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkImageMenuItem">
                         <property name="label">gtk-save</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="use-underline">True</property>
+                        <property name="use-stock">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkImageMenuItem">
                         <property name="label">gtk-save-as</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="use-underline">True</property>
+                        <property name="use-stock">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkSeparatorMenuItem">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
+                        <property name="can-focus">False</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkImageMenuItem" id="menu_sair">
                         <property name="label">gtk-quit</property>
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="use-underline">True</property>
+                        <property name="use-stock">True</property>
                         <signal name="activate" handler="on_menu_sair_activate" swapped="no"/>
                       </object>
                     </child>
@@ -87,47 +83,47 @@
             </child>
             <child>
               <object class="GtkMenuItem">
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">_Editar</property>
-                <property name="use_underline">True</property>
+                <property name="use-underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can-focus">False</property>
                     <child>
                       <object class="GtkImageMenuItem">
                         <property name="label">gtk-cut</property>
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="use-underline">True</property>
+                        <property name="use-stock">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkImageMenuItem">
                         <property name="label">gtk-copy</property>
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="use-underline">True</property>
+                        <property name="use-stock">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkImageMenuItem">
                         <property name="label">gtk-paste</property>
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="use-underline">True</property>
+                        <property name="use-stock">True</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkImageMenuItem">
                         <property name="label">gtk-delete</property>
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="use-underline">True</property>
+                        <property name="use-stock">True</property>
                       </object>
                     </child>
                   </object>
@@ -136,28 +132,28 @@
             </child>
             <child>
               <object class="GtkMenuItem">
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">_Ver</property>
-                <property name="use_underline">True</property>
+                <property name="use-underline">True</property>
               </object>
             </child>
             <child>
               <object class="GtkMenuItem">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">Aj_uda</property>
-                <property name="use_underline">True</property>
+                <property name="use-underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can-focus">False</property>
                     <child>
                       <object class="GtkImageMenuItem" id="menu_ajuda_sobre">
                         <property name="label">gtk-about</property>
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="use-underline">True</property>
+                        <property name="use-stock">True</property>
                         <signal name="activate" handler="on_menu_ajuda_sobre_activate" swapped="no"/>
                       </object>
                     </child>
@@ -174,15 +170,15 @@
         </child>
         <child>
           <object class="GtkBox" id="exibir">
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkLabel">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="halign">start</property>
-                <property name="margin_top">20</property>
-                <property name="margin_bottom">20</property>
+                <property name="margin-top">20</property>
+                <property name="margin-bottom">20</property>
                 <property name="label" translatable="yes">Menu: Exibir contas e senhas cadastradas</property>
                 <property name="xalign">0</property>
               </object>
@@ -193,13 +189,14 @@
               </packing>
             </child>
             <child>
+              <!-- n-columns=3 n-rows=3 -->
               <object class="GtkGrid" id="grid">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="margin_top">10</property>
-                <property name="margin_bottom">10</property>
-                <property name="row_homogeneous">True</property>
-                <property name="column_homogeneous">True</property>
+                <property name="can-focus">False</property>
+                <property name="margin-top">10</property>
+                <property name="margin-bottom">10</property>
+                <property name="row-homogeneous">True</property>
+                <property name="column-homogeneous">True</property>
                 <child>
                   <placeholder/>
                 </child>
@@ -237,10 +234,10 @@
             <child>
               <object class="GtkTreeView" id="lista">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="margin_top">10</property>
-                <property name="margin_bottom">10</property>
-                <property name="activate_on_single_click">True</property>
+                <property name="can-focus">False</property>
+                <property name="margin-top">10</property>
+                <property name="margin-bottom">10</property>
+                <property name="activate-on-single-click">True</property>
                 <signal name="row-activated" handler="on_lista_row_activated" swapped="no"/>
                 <child internal-child="selection">
                   <object class="GtkTreeSelection"/>
@@ -255,16 +252,16 @@
             <child>
               <object class="GtkButtonBox">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="margin_top">10</property>
-                <property name="margin_bottom">10</property>
-                <property name="layout_style">start</property>
+                <property name="can-focus">False</property>
+                <property name="margin-top">10</property>
+                <property name="margin-bottom">10</property>
+                <property name="layout-style">start</property>
                 <child>
                   <object class="GtkButton" id="fechar">
                     <property name="label" translatable="yes">Fechar</property>
                     <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
                     <signal name="clicked" handler="on_fechar_clicked" swapped="no"/>
                   </object>
                   <packing>
@@ -277,9 +274,9 @@
                   <object class="GtkButton" id="botao_alterar">
                     <property name="label" translatable="yes">Alterar</property>
                     <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="tooltip_text" translatable="yes">Permite alterar a conta, usuário ou senha cadastrada, selecione uma conta antes de clicar no botão para fazer a alteração.</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                    <property name="tooltip-text" translatable="yes">Permite alterar a conta, usuário ou senha cadastrada, selecione uma conta antes de clicar no botão para fazer a alteração.</property>
                     <signal name="clicked" handler="on_botao_alterar_clicked" swapped="no"/>
                   </object>
                   <packing>
@@ -292,8 +289,8 @@
                   <object class="GtkButton" id="excluir_item">
                     <property name="label" translatable="yes">Excluir Item</property>
                     <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
                     <signal name="clicked" handler="on_excluir_item_clicked" swapped="no"/>
                   </object>
                   <packing>
@@ -306,8 +303,8 @@
                   <object class="GtkButton" id="botao_cadastrar1">
                     <property name="label" translatable="yes">Cadastrar</property>
                     <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
                     <signal name="clicked" handler="on_botao_cadastrar_clicked" swapped="no"/>
                   </object>
                   <packing>
@@ -334,34 +331,31 @@
     </child>
   </object>
   <object class="GtkDialog" id="dialogo">
-    <property name="can_focus">False</property>
+    <property name="can-focus">False</property>
     <property name="title" translatable="yes">Mensagem</property>
-    <property name="window_position">center-always</property>
-    <property name="type_hint">dialog</property>
-    <property name="transient_for">main_window</property>
-    <child>
-      <placeholder/>
-    </child>
+    <property name="window-position">center-always</property>
+    <property name="type-hint">dialog</property>
+    <property name="transient-for">main_window</property>
     <child internal-child="vbox">
       <object class="GtkBox">
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox">
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="halign">center</property>
-            <property name="margin_left">5</property>
-            <property name="margin_right">5</property>
-            <property name="margin_top">5</property>
-            <property name="margin_bottom">5</property>
-            <property name="layout_style">end</property>
+            <property name="margin-left">5</property>
+            <property name="margin-right">5</property>
+            <property name="margin-top">5</property>
+            <property name="margin-bottom">5</property>
+            <property name="layout-style">end</property>
             <child>
               <object class="GtkButton" id="button6">
                 <property name="label" translatable="yes">OK</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -382,11 +376,11 @@
         <child>
           <object class="GtkLabel" id="rotulo">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="halign">center</property>
             <property name="valign">center</property>
-            <property name="margin_top">30</property>
-            <property name="margin_bottom">10</property>
+            <property name="margin-top">30</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
             <property name="justify">center</property>
           </object>
@@ -403,43 +397,48 @@
     </action-widgets>
   </object>
   <object class="GtkAboutDialog" id="dialogo_sobre">
-    <property name="can_focus">False</property>
+    <property name="can-focus">False</property>
+    <property name="double-buffered">False</property>
     <property name="title" translatable="yes">Sobre o Gerenciador de Contas e Senhas</property>
-    <property name="window_position">center</property>
+    <property name="window-position">center</property>
     <property name="icon">icone_64x64.png</property>
-    <property name="type_hint">dialog</property>
-    <property name="transient_for">main_window</property>
-    <property name="program_name">Gerenciador de Contas e Senhas</property>
-    <property name="version">Versão 3.0</property>
-    <property name="copyright" translatable="yes">Copyright Lion Design.</property>
-    <property name="comments" translatable="yes">O "Grenciador de Contas e Senhas" é um programa desenvolvido por Junio da Silva Damasceno, proprietário da Lion Desing. Este programa é uma plataforma segura onde usuários podem armazenar suas contas e senhas. Este programa não se conecta a internet, não armazena remotamente seus dados e não faz login em nenhuma conta cadastrada. Toda a informação que o usuário armazena dentro deste programa fica criptografada dentro do computador do usuário. O intuito da criação deste programa foi o de fornecer uma plataforma onde o usuário possa armazenar as diversas contas e senhas que ele eventualmente venha a possuir. Caso o usuário não se lembre no futuro pode recorrer a este programa para recuperar a informação.
+    <property name="type-hint">dialog</property>
+    <property name="transient-for">main_window</property>
+    <property name="program-name">Gerenciador de Contas e Senhas</property>
+    <property name="version">Versão 3.2.1</property>
+    <property name="copyright" translatable="yes">Copyright Junio da Silva Damasceno</property>
+    <property name="comments" translatable="yes">O “Gerenciador de Contas e Senhas” de Junio da Silva Damasceno é uma plataforma segura para armazenar contas e senhas. Não se conecta à internet, não armazena dados remotamente e não faz login em contas cadastradas. As informações são criptografadas localmente no computador do usuário.
 
-Caso tenha gostado deste programa e queira
-fazer uma doação simbólica em qualquer valor
-fique a vontate. Clicando no link da Nubank abaixo,
-você pode fazer por QR Code, TED ou DOC por qualquer banco no Brasil.</property>
-    <property name="website"> https://nubank.com.br/pagar/a04sz/5b1E66DC2g</property>
-    <property name="website_label" translatable="yes">Link da Nubank</property>
+Doações:
+Banco Sicoob - Coop Aracoop LTDA. - Sicoob Aracoop
+Agência/Cooperativa: 4264
+Conta: 7.136.082-4
+Chave PIX: 31982580469
+
+Bitcoin Wallet Adress:
+bc1q5ynlewg5j0pkwgrvltt6tns7zclqa0wwacms7m</property>
+    <property name="website">https://github.com/JunioDamasceno/gerenciadorcs</property>
+    <property name="website-label" translatable="yes">https://github.com/JunioDamasceno/gerenciadorcs</property>
     <property name="authors">Junio da Silva Damasceno</property>
-    <property name="logo">../../../../../../snap/gerenciadorcs/current/meta/gui/gerenciadorcs.png</property>
-    <property name="license_type">mit-x11</property>
-    <child>
-      <placeholder/>
-    </child>
+    <property name="translator-credits" translatable="yes">Junio da Silva Damasceno</property>
+    <property name="logo">snap/gerenciadorcs/current/meta/gui/gerenciadorcs.png</property>
+    <property name="license-type">mit-x11</property>
     <child internal-child="vbox">
       <object class="GtkBox">
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
+        <property name="double-buffered">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox">
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
+            <property name="double-buffered">False</property>
             <property name="halign">center</property>
             <property name="valign">center</property>
-            <property name="margin_right">5</property>
-            <property name="margin_top">5</property>
-            <property name="margin_bottom">5</property>
-            <property name="layout_style">end</property>
+            <property name="margin-right">5</property>
+            <property name="margin-top">5</property>
+            <property name="margin-bottom">5</property>
+            <property name="layout-style">end</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -450,13 +449,9 @@ você pode fazer por QR Code, TED ou DOC por qualquer banco no Brasil.</property
         <child>
           <object class="GtkLabel">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">
-Versão 3.0
-Desenvolvido por Lion Design
-Proprietário: Junio da Silva Damasceno
-País: Brasil
-Contato: juniowin@yahoo.com.br
+            <property name="can-focus">False</property>
+            <property name="double-buffered">False</property>
+            <property name="label" translatable="yes">Contato: juniowin@yahoo.com.br
 Telefone: 5531982580469</property>
           </object>
           <packing>
@@ -469,40 +464,37 @@ Telefone: 5531982580469</property>
     </child>
   </object>
   <object class="GtkDialog" id="login">
-    <property name="can_focus">True</property>
+    <property name="can-focus">True</property>
     <property name="title" translatable="yes">Login</property>
     <property name="resizable">False</property>
-    <property name="window_position">center-always</property>
-    <property name="default_width">200</property>
-    <property name="destroy_with_parent">True</property>
-    <property name="icon">../../../../../../snap/gerenciadorcs/current/meta/gui/gerenciadorcs.png</property>
-    <property name="type_hint">dialog</property>
-    <property name="transient_for">main_window</property>
+    <property name="window-position">center-always</property>
+    <property name="default-width">200</property>
+    <property name="destroy-with-parent">True</property>
+    <property name="icon">../../../../../snap/gerenciadorcs/current/meta/gui/gerenciadorcs.png</property>
+    <property name="type-hint">dialog</property>
+    <property name="transient-for">main_window</property>
     <signal name="destroy" handler="on_login_destroy" swapped="no"/>
-    <child>
-      <placeholder/>
-    </child>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox1">
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox" id="dialog-action_area">
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="halign">center</property>
             <property name="valign">center</property>
-            <property name="margin_left">10</property>
-            <property name="margin_right">10</property>
-            <property name="margin_top">10</property>
-            <property name="margin_bottom">10</property>
-            <property name="layout_style">end</property>
+            <property name="margin-left">10</property>
+            <property name="margin-right">10</property>
+            <property name="margin-top">10</property>
+            <property name="margin-bottom">10</property>
+            <property name="layout-style">end</property>
             <child>
               <object class="GtkButton" id="pref_ok">
                 <property name="label" translatable="yes">OK</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -514,8 +506,8 @@ Telefone: 5531982580469</property>
               <object class="GtkButton" id="pref_fechar">
                 <property name="label" translatable="yes">Fechar</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -528,8 +520,8 @@ Telefone: 5531982580469</property>
                 <property name="label" translatable="yes">Cadastrar 
 novo usuário</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -545,44 +537,45 @@ novo usuário</property>
           </packing>
         </child>
         <child>
+          <!-- n-columns=2 n-rows=1 -->
           <object class="GtkGrid">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="halign">center</property>
-            <property name="row_homogeneous">True</property>
+            <property name="row-homogeneous">True</property>
             <child>
               <object class="GtkLabel">
                 <property name="visible">True</property>
                 <property name="sensitive">False</property>
-                <property name="can_focus">False</property>
-                <property name="margin_left">11</property>
-                <property name="margin_right">10</property>
+                <property name="can-focus">False</property>
+                <property name="margin-left">11</property>
+                <property name="margin-right">10</property>
                 <property name="label" translatable="yes">Bem vindo ao Gerenciador de Contas e Senhas!
 Entre com as credenciais ou 
 cadastre um novo usuário.</property>
                 <property name="justify">center</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">0</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">0</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage">
                 <property name="visible">True</property>
                 <property name="sensitive">False</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="halign">center</property>
                 <property name="valign">center</property>
-                <property name="margin_left">5</property>
-                <property name="margin_right">5</property>
-                <property name="margin_top">5</property>
-                <property name="margin_bottom">5</property>
-                <property name="pixbuf">../../../../../../snap/gerenciadorcs/current/meta/gui/gerenciadorcs.png</property>
+                <property name="margin-left">5</property>
+                <property name="margin-right">5</property>
+                <property name="margin-top">5</property>
+                <property name="margin-bottom">5</property>
+                <property name="pixbuf">snap/gerenciadorcs/current/meta/gui/gerenciadorcs.png</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">0</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">0</property>
               </packing>
             </child>
           </object>
@@ -595,15 +588,15 @@ cadastre um novo usuário.</property>
         <child>
           <object class="GtkBox" id="box1">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="halign">center</property>
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkLabel" id="título_usuário">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="margin_top">10</property>
-                <property name="margin_bottom">2</property>
+                <property name="can-focus">False</property>
+                <property name="margin-top">10</property>
+                <property name="margin-bottom">2</property>
                 <property name="label" translatable="yes">Usuário:</property>
                 <property name="xalign">0</property>
               </object>
@@ -616,12 +609,12 @@ cadastre um novo usuário.</property>
             <child>
               <object class="GtkEntry" id="msg_aux">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
                 <property name="halign">start</property>
-                <property name="margin_bottom">10</property>
-                <property name="primary_icon_stock">gtk-orientation-portrait</property>
-                <property name="primary_icon_activatable">False</property>
-                <property name="primary_icon_sensitive">False</property>
+                <property name="margin-bottom">10</property>
+                <property name="primary-icon-stock">gtk-orientation-portrait</property>
+                <property name="primary-icon-activatable">False</property>
+                <property name="primary-icon-sensitive">False</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -632,8 +625,8 @@ cadastre um novo usuário.</property>
             <child>
               <object class="GtkLabel" id="Título_senha">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="margin_bottom">2</property>
+                <property name="can-focus">False</property>
+                <property name="margin-bottom">2</property>
                 <property name="label" translatable="yes">Senha:</property>
                 <property name="xalign">0</property>
               </object>
@@ -646,15 +639,15 @@ cadastre um novo usuário.</property>
             <child>
               <object class="GtkEntry" id="msg_pux">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
                 <property name="halign">start</property>
-                <property name="margin_bottom">10</property>
+                <property name="margin-bottom">10</property>
                 <property name="visibility">False</property>
-                <property name="invisible_char">●</property>
-                <property name="primary_icon_stock">gtk-dialog-authentication</property>
-                <property name="primary_icon_activatable">False</property>
-                <property name="primary_icon_sensitive">False</property>
-                <property name="input_purpose">password</property>
+                <property name="invisible-char">●</property>
+                <property name="primary-icon-stock">gtk-dialog-authentication</property>
+                <property name="primary-icon-activatable">False</property>
+                <property name="primary-icon-sensitive">False</property>
+                <property name="input-purpose">password</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -678,28 +671,25 @@ cadastre um novo usuário.</property>
     </action-widgets>
   </object>
   <object class="GtkDialog" id="new_user">
-    <property name="can_focus">False</property>
-    <property name="type_hint">dialog</property>
-    <property name="transient_for">login</property>
-    <child>
-      <placeholder/>
-    </child>
+    <property name="can-focus">False</property>
+    <property name="type-hint">dialog</property>
+    <property name="transient-for">login</property>
     <child internal-child="vbox">
       <object class="GtkBox">
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox">
-            <property name="can_focus">False</property>
-            <property name="margin_top">10</property>
-            <property name="layout_style">end</property>
+            <property name="can-focus">False</property>
+            <property name="margin-top">10</property>
+            <property name="layout-style">end</property>
             <child>
               <object class="GtkButton" id="button3">
                 <property name="label" translatable="yes">OK</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -711,8 +701,8 @@ cadastre um novo usuário.</property>
               <object class="GtkButton" id="button4">
                 <property name="label" translatable="yes">Cancelar</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -730,10 +720,10 @@ cadastre um novo usuário.</property>
         <child>
           <object class="GtkLabel">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="halign">start</property>
-            <property name="margin_top">10</property>
-            <property name="margin_bottom">2</property>
+            <property name="margin-top">10</property>
+            <property name="margin-bottom">2</property>
             <property name="label" translatable="yes">Nome de usuário:</property>
             <property name="xalign">0</property>
           </object>
@@ -746,9 +736,9 @@ cadastre um novo usuário.</property>
         <child>
           <object class="GtkEntry" id="user_name">
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="margin_bottom">10</property>
-            <property name="activates_default">True</property>
+            <property name="can-focus">True</property>
+            <property name="margin-bottom">10</property>
+            <property name="activates-default">True</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -759,9 +749,9 @@ cadastre um novo usuário.</property>
         <child>
           <object class="GtkLabel">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="halign">start</property>
-            <property name="margin_bottom">2</property>
+            <property name="margin-bottom">2</property>
             <property name="label" translatable="yes">Senha:</property>
             <property name="xalign">0</property>
           </object>
@@ -774,12 +764,12 @@ cadastre um novo usuário.</property>
         <child>
           <object class="GtkEntry" id="user_p">
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="margin_bottom">10</property>
+            <property name="can-focus">True</property>
+            <property name="margin-bottom">10</property>
             <property name="visibility">False</property>
-            <property name="invisible_char">●</property>
-            <property name="activates_default">True</property>
-            <property name="input_purpose">password</property>
+            <property name="invisible-char">●</property>
+            <property name="activates-default">True</property>
+            <property name="input-purpose">password</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -795,30 +785,27 @@ cadastre um novo usuário.</property>
     </action-widgets>
   </object>
   <object class="GtkDialog" id="window_alterar">
-    <property name="can_focus">False</property>
+    <property name="can-focus">False</property>
     <property name="modal">True</property>
-    <property name="type_hint">dialog</property>
-    <property name="transient_for">main_window</property>
+    <property name="type-hint">dialog</property>
+    <property name="transient-for">main_window</property>
     <signal name="delete-event" handler="on_window_alterar_delete_event" swapped="no"/>
-    <child>
-      <placeholder/>
-    </child>
     <child internal-child="vbox">
       <object class="GtkBox">
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox">
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
             <child>
               <object class="GtkButton" id="botao_confirmar_alteracao">
                 <property name="label" translatable="yes">Confirmar 
 alteração</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
                 <signal name="clicked" handler="on_botao_confirmar_alteracao_clicked" swapped="no"/>
               </object>
               <packing>
@@ -831,8 +818,8 @@ alteração</property>
               <object class="GtkButton" id="botao_voltara">
                 <property name="label" translatable="yes">Voltar</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
                 <signal name="clicked" handler="on_botao_voltara_clicked" swapped="no"/>
               </object>
               <packing>
@@ -851,15 +838,15 @@ alteração</property>
         <child>
           <object class="GtkBox" id="alterar">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkLabel">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="halign">start</property>
-                <property name="margin_top">20</property>
-                <property name="margin_bottom">20</property>
+                <property name="margin-top">20</property>
+                <property name="margin-bottom">20</property>
                 <property name="label" translatable="yes">Menu: Alterar uma conta ou senha cadastrada</property>
                 <property name="xalign">0</property>
               </object>
@@ -872,9 +859,9 @@ alteração</property>
             <child>
               <object class="GtkLabel">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="halign">start</property>
-                <property name="margin_bottom">2</property>
+                <property name="margin-bottom">2</property>
                 <property name="label" translatable="yes">Nome da conta:
 preencha apenas se desejar alterar o nome da conta</property>
                 <property name="xalign">0</property>
@@ -888,9 +875,9 @@ preencha apenas se desejar alterar o nome da conta</property>
             <child>
               <object class="GtkEntry" id="conta_nova">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
                 <property name="halign">start</property>
-                <property name="margin_bottom">10</property>
+                <property name="margin-bottom">10</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -901,9 +888,9 @@ preencha apenas se desejar alterar o nome da conta</property>
             <child>
               <object class="GtkLabel">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="halign">start</property>
-                <property name="margin_bottom">2</property>
+                <property name="margin-bottom">2</property>
                 <property name="label" translatable="yes">Nome de Usuário:
 Preencha apenas se desejar alterar o nome de usuário.</property>
                 <property name="xalign">0</property>
@@ -917,9 +904,9 @@ Preencha apenas se desejar alterar o nome de usuário.</property>
             <child>
               <object class="GtkEntry" id="usuario_novo">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
                 <property name="halign">start</property>
-                <property name="margin_bottom">10</property>
+                <property name="margin-bottom">10</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -930,9 +917,9 @@ Preencha apenas se desejar alterar o nome de usuário.</property>
             <child>
               <object class="GtkLabel">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="halign">start</property>
-                <property name="margin_bottom">2</property>
+                <property name="margin-bottom">2</property>
                 <property name="label" translatable="yes">Nova senha:
 Obrigatório, se não for alterar, repita a atual.</property>
                 <property name="xalign">0</property>
@@ -946,9 +933,9 @@ Obrigatório, se não for alterar, repita a atual.</property>
             <child>
               <object class="GtkEntry" id="senha_nova">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
                 <property name="halign">start</property>
-                <property name="margin_bottom">10</property>
+                <property name="margin-bottom">10</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -967,28 +954,25 @@ Obrigatório, se não for alterar, repita a atual.</property>
     </child>
   </object>
   <object class="GtkDialog" id="window_cadastrar">
-    <property name="can_focus">False</property>
-    <property name="type_hint">dialog</property>
-    <property name="transient_for">main_window</property>
-    <child>
-      <placeholder/>
-    </child>
+    <property name="can-focus">False</property>
+    <property name="type-hint">dialog</property>
+    <property name="transient-for">main_window</property>
     <child internal-child="vbox">
       <object class="GtkBox">
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox">
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
             <child>
               <object class="GtkButton" id="botao_gravar_registro">
                 <property name="label" translatable="yes">Gravar
 Registro</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
                 <signal name="clicked" handler="on_botao_gravar_registro_clicked" swapped="no"/>
               </object>
               <packing>
@@ -1001,8 +985,8 @@ Registro</property>
               <object class="GtkButton" id="botao_voltarc">
                 <property name="label" translatable="yes">Voltar</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
                 <signal name="clicked" handler="on_botao_voltarc_clicked" swapped="no"/>
               </object>
               <packing>
@@ -1021,15 +1005,15 @@ Registro</property>
         <child>
           <object class="GtkBox" id="cadastrar">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkLabel">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="halign">start</property>
-                <property name="margin_top">20</property>
-                <property name="margin_bottom">20</property>
+                <property name="margin-top">20</property>
+                <property name="margin-bottom">20</property>
                 <property name="label" translatable="yes">Menu: Cadastrar uma nova conta e senha</property>
               </object>
               <packing>
@@ -1041,9 +1025,9 @@ Registro</property>
             <child>
               <object class="GtkLabel">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="halign">start</property>
-                <property name="margin_bottom">2</property>
+                <property name="margin-bottom">2</property>
                 <property name="label" translatable="yes">Nome da Conta (ex. Hotmail, Gmail, Netflix, GitHub, etc.)</property>
                 <property name="xalign">0</property>
               </object>
@@ -1056,9 +1040,9 @@ Registro</property>
             <child>
               <object class="GtkEntry" id="conta_name">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
                 <property name="halign">start</property>
-                <property name="margin_bottom">10</property>
+                <property name="margin-bottom">10</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -1069,9 +1053,9 @@ Registro</property>
             <child>
               <object class="GtkLabel">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="halign">start</property>
-                <property name="margin_bottom">2</property>
+                <property name="margin-bottom">2</property>
                 <property name="label" translatable="yes">Nome de Usuário (ex. felipe@hotmail.com, Anal.Flores, etc.)</property>
                 <property name="xalign">0</property>
               </object>
@@ -1084,9 +1068,9 @@ Registro</property>
             <child>
               <object class="GtkEntry" id="nome_usuario">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
                 <property name="halign">start</property>
-                <property name="margin_bottom">10</property>
+                <property name="margin-bottom">10</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -1097,9 +1081,9 @@ Registro</property>
             <child>
               <object class="GtkLabel">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="halign">start</property>
-                <property name="margin_bottom">2</property>
+                <property name="margin-bottom">2</property>
                 <property name="label" translatable="yes">Senha</property>
                 <property name="xalign">0</property>
               </object>
@@ -1112,9 +1096,9 @@ Registro</property>
             <child>
               <object class="GtkEntry" id="conta_ps">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
                 <property name="halign">start</property>
-                <property name="margin_bottom">10</property>
+                <property name="margin-bottom">10</property>
               </object>
               <packing>
                 <property name="expand">False</property>
